@@ -26,14 +26,12 @@ public class PairsMapper extends Mapper<Object, Text, Text, IntWritable> {
             return;
         }
 
-        // Split the order ID from the product list.
         String[] fields = line.split("\\s+", 2);
 
         if (fields.length < 2) {
             return;
         }
 
-        // Deduplicate and sort products to generate each unordered pair once.
         TreeSet<String> products = new TreeSet<>();
 
         Arrays.stream(fields[1].split(","))
