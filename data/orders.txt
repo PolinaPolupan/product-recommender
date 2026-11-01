@@ -1,0 +1,4 @@
+order_1	phone,case,charger
+order_2	phone,case
+order_3	phone,charger
+order_4	case,charger
